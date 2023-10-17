@@ -1,0 +1,53 @@
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+set number
+set relativenumber
+set incsearch
+set hls
+set ignorecase
+set smartcase
+set clipboard+=unnamed
+
+let mapleader = " "
+nmap <leader>gs <Action>(GotoSymbol)
+nmap <leader>gc <Action>(GotoClass)
+nmap <leader>gu <Action>(GotoSuperMethod)
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gt <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gr <Action>(FindUsages)
+nmap <leader>sp <Action>(FindInPath)
+
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>cr <Action>(RenameElement)
+vmap <leader>cv <Action>(IntroduceVariable)
+nmap <leader>cn <Action>(Inline)
+nmap <leader>df <Action>(ShowErrorDescription)
+
+nmap K <Action>(QuickJavaDoc)
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
+vmap J <Action>(MoveLineDown)
+vmap K <Action>(MoveLineUp)
+nmap <M-j> <Action>(GotoNextError)
+nmap <M-k> <Action>(GotoPreviousError)
+
+nmap <leader><leader>d "_d
+vmap <leader><leader>d "_d
+
+nmap gcc <Action>(CommentByLineComment)
+
+vmap gc <Action>(CommentByLineComment)
+vmap gb <Action>(CommentByBlockComment)
+
+vmap P pgvy`>
