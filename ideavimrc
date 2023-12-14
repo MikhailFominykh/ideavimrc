@@ -8,6 +8,8 @@ Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
 
+set NERDTree
+
 set number
 set relativenumber
 set incsearch
@@ -41,6 +43,8 @@ vmap J <Action>(MoveLineDown)
 vmap K <Action>(MoveLineUp)
 nmap <M-j> <Action>(GotoNextError)
 nmap <M-k> <Action>(GotoPreviousError)
+nmap <M-S-j> <Action>(NextOccurence)
+nmap <M-S-k> <Action>(PreviousOccurence)
 
 nmap <leader><leader>d "_d
 vmap <leader><leader>d "_d
