@@ -16,24 +16,34 @@ set incsearch
 set hls
 set ignorecase
 set smartcase
-set clipboard+=unnamed
 
 let mapleader = " "
 nmap <leader>gs <Action>(GotoSymbol)
 nmap <leader>gc <Action>(GotoClass)
 nmap <leader>gu <Action>(GotoSuperMethod)
 nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fo <Action>(OpenEditorInOppositeTabGroup)
 nmap <leader>gd <Action>(GotoDeclaration)
 nmap <leader>gt <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gr <Action>(FindUsages)
+
+nmap <leader>rr <Action>(Run)
+nmap <leader>rc <Action>(ChooseRunConfiguration)
+
 nmap <leader>sp <Action>(FindInPath)
 
 nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>cr <Action>(RenameElement)
 vmap <leader>cv <Action>(IntroduceVariable)
 nmap <leader>cn <Action>(Inline)
-nmap <leader>df <Action>(ShowErrorDescription)
+
+nmap <leader>de <Action>(ShowErrorDescription)
+nmap <leader>dp <Action>(ParameterInfo)
+
+nmap <leader>whh <Action>(HideAllWindows)
+nmap <leader>wt <Action>(ActivateTerminalToolWindow)
+nmap gww <Action>(NextSplitter)
 
 nmap K <Action>(QuickJavaDoc)
 nmap <C-o> <Action>(Back)
@@ -50,8 +60,9 @@ nmap <leader><leader>d "_d
 vmap <leader><leader>d "_d
 
 nmap gcc <Action>(CommentByLineComment)
-
 vmap gc <Action>(CommentByLineComment)
 vmap gb <Action>(CommentByBlockComment)
+
+nmap gvc <Action>(Compare.SameVersion)
 
 vmap P pgvy`>
